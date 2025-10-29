@@ -1,5 +1,5 @@
 #!/bin/bash
-M3U_URL="TVOJ_M3U_LINK_HERE"  # ← stavi svoj M3U URL
+M3U_URL=" http://exm3u.123tv.to:8080/c/" 
 OUTPUT_DIR="streams"
 mkdir -p $OUTPUT_DIR
 
