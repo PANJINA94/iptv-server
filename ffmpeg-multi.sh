@@ -1,5 +1,5 @@
 #!/bin/bash
-M3U_URL=" http://exm3u.123tv.to:8080/c/" 
+M3U_URL="https://raw.githubusercontent.com/PANJINA94/test/master/test.m3u"
 OUTPUT_DIR="streams"
 mkdir -p $OUTPUT_DIR
 
