@@ -44,3 +44,4 @@ const server = http.createServer((req, res) => {
 server.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
+chmod +x ffmpeg-test.sh
