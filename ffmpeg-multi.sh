@@ -1,0 +1,13 @@
+#!/bin/bash
+M3U_URL="TVOJ_M3U_LINK_HERE"  # ← stavi svoj M3U URL
+OUTPUT_DIR="streams"
+mkdir -p $OUTPUT_DIR
+
+echo "Downloading channels from $M3U_URL ..."
+curl -s $M3U_URL | grep -E "http" | while read STREAM; do
+    NAME=$(echo $STREAM | md5sum | cut -d' ' -f1)
+    echo "Downloading $STREAM ..."
+    ffmpeg -i "$STREAM" -t 10 "$OUTPUT_DIR/$NAME.ts" -y
+done
+
+echo "All streams saved in $OUTPUT_DIR/"
